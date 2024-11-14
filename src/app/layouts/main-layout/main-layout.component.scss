@@ -14,23 +14,21 @@
         height: 100%;
 
         @media (max-width: 768px) {
-            display: none;
+            // display: none;
+            width: 3rem;
         }
 
     }
 
     .nav-bar-collapse {
-        width: 4%;
+        width: 3rem;
     }
 
     .main-page {
         background-color: $bgColor;
         width: 100%;
-        // margin-right: 5px;
-
         display: flex;
         flex-direction: column;
-        // padding: 1rem;
         overflow-y: auto;
     }
 }

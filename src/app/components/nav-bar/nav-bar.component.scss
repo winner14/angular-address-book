@@ -20,6 +20,10 @@
             font-weight: 500;
             cursor: pointer;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
         .nav-bar-toggle-btn {
@@ -32,6 +36,10 @@
         display: flex;
         flex-direction: column;
         gap: .1rem;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
 
         .nav-bar-icon {
             @media (max-width: 768px) {
