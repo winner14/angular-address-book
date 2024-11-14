@@ -1,35 +1,41 @@
-<div class="nav-bar">
-    <div class="nav-bar-title">Address Book</div>
+<div class="nav-bar" [ngClass]="{'nav-bar-collapse': navBarService.collapseNavBar === true}">
+    <div class="nav-bar-title">
+        <span class="nav-bar-title-text"
+            [ngClass]="{'nav-bar-title-text-collapse': navBarService.collapseNavBar === true}">Address Book</span>
+        @if(navBarService.collapseNavBar === false) {
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="nav-bar-toggle-btn" (click)="navBarService.toggleNavBar()">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 8 8 12 12 16"></polyline>
+            <line x1="16" y1="12" x2="8" y2="12"></line>
+        </svg>
+        } @else {
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="nav-bar-toggle-btn" (click)="navBarService.toggleNavBar()">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 16 16 12 12 8"></polyline>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+        </svg>
+        }
+    </div>
     <div class="nav-bar-links">
-        <!-- <a routerLink="contacts" routerLinkActive="active">
-            <div class="nav-bar-link" (click)="onNavOptionClick('contacts')"
-                [class.active]="currentRoute === 'contacts'">Contacts</div>
-        </a> -->
-        <!-- <a routerLink="favorites" routerLinkActive="active">
-            <div class="nav-bar-link" [class.active]="currentRoute === 'favorites'"
-                (click)="onNavOptionClick('favorites')" [ngClass]="{'active': currentRoute === 'favorites'}">Favorites
-            </div>
-        </a> -->
-        <div class="nav-bar-link" [class.active]="currentRoute === '/contacts'" (click)="onNavOptionClick('contacts')">
+        <div class="nav-bar-link" [ngClass]="{'nav-bar-link-collapse': navBarService.collapseNavBar === true}"
+            [class.active]="currentRoute === '/contacts'" (click)="onNavOptionClick('contacts')">
             <a class="nav-text">Contacts</a>
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="nav-bar-icon" width="26" height="26" viewBox="0 0 24 24"
-                fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
         </div>
-        <div class="nav-bar-link" [class.active]="currentRoute === '/favorites'"
-            (click)="onNavOptionClick('favorites')">
+        <div class="nav-bar-link" [ngClass]="{'nav-bar-link-collapse': navBarService.collapseNavBar === true}"
+            [class.active]="currentRoute === '/favorites'" (click)="onNavOptionClick('favorites')">
             <a class="nav-text">Favorites</a>
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="nav-bar-icon" viewBox="-0.5 -0.5 16 16" fill="#fff"
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="nav-bar-icon" viewBox="-0.5 -0.5 16 16" fill="#fff"
                 id="Heart--Streamline-Tabler-Filled.svg" height="26" width="26">
                 <desc>Heart Streamline Icon: https://streamlinehq.com</desc>
                 <path
                     d="M3.8174375 0.9465C5.1344375 0.7220625 6.482187499999999 1.1071250000000001 7.4818750000000005 1.993375L7.5090625 2.0176250000000002L7.534062500000001 1.9955625C8.487 1.1592500000000001 9.7539375 0.7738125 11.011187499999998 0.9376875L11.1919375 0.964125C14.535687500000002 1.5414375 16.0005625 5.522 13.828687500000001 8.129125C13.775375 8.1931875 13.720187500000002 8.2556875 13.6633125 8.3165625L13.531062499999999 8.452499999999999L13.4958125 8.482625L8.022625 13.9036875C7.761375 14.162187500000002 7.3493125 14.1879375 7.058 13.9639375L6.9889375 13.9036875L1.4841250000000001 8.451C-0.947875 6.0846875 0.09375 1.9730625 3.3590625000000003 1.05C3.509875 1.007375 3.6628749999999997 0.9728125 3.8174375 0.9465Z"
                     stroke-width="1"></path>
-            </svg>
+            </svg> -->
         </div>
     </div>
 </div>

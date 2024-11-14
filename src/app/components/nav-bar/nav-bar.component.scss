@@ -5,16 +5,27 @@
     flex-direction: column;
     // width: 16vw;
     align-items: left;
-    padding: 1rem;
+    padding: .7rem;
 
     .nav-bar-title {
-        color: $bgColor;
         background-color: $primaryColor;
-        font-size: 1.5rem;
-        font-weight: 700;
         margin-bottom: 1.5rem;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $bgColor;
+
+        .nav-bar-title-text {
+            font-size: 1.3rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .nav-bar-toggle-btn {
+            cursor: pointer;
+        }
+
     }
 
     .nav-bar-links {
@@ -54,4 +65,21 @@
             background-color: $secondaryColor;
         }
     }
+}
+
+.nav-bar-collapse {
+    display: flex;
+    flex-direction: column;
+    // width: 16vw;
+    align-items: center;
+    padding: .7rem;
+
+    .nav-bar-title-text-collapse {
+        display: none;
+    }
+
+    .nav-bar-link-collapse {
+        display: none;
+    }
+
 }

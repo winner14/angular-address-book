@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  url: string = 'http://localhost:3600';
+  // url: string = 'http://well-lobster-boss.ngrok-free.app';
+  url: string = 'http://95b1-102-176-101-7.ngrok-free.app';
 
   constructor(private http: HttpClient) { }
 

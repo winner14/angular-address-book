@@ -1,5 +1,5 @@
 <main class="main">
-    <div class="nav-bar">
+    <div class="nav-bar" [ngClass]="{'nav-bar-collapse': navBarService.collapseNavBar === true}">
         <app-nav-bar />
     </div>
     <div class="main-page">

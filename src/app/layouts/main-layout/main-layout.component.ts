@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from "../../components/nav-bar/nav-bar.component";
 import { TitleBarComponent } from "../../components/title-bar/title-bar.component";
+import { NavBarServiceService } from '../../services/nav-bar-service.service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-main-layout',
@@ -10,15 +12,11 @@ import { TitleBarComponent } from "../../components/title-bar/title-bar.componen
     RouterOutlet,
     NavBarComponent,
     TitleBarComponent,
+    NgClass,
   ],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss'
 })
 export class MainLayoutComponent {
-  title: string = 'Contacts';
-
-  // create public method to change title in the nav bar component file
-  changeTitle(title: string) {
-    this.title = title;
-  }
+  navBarService = inject(NavBarServiceService);
 }
