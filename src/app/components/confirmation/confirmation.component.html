@@ -1,0 +1,10 @@
+<div class="modal-pop-up contact-details">
+    <h3 class="contact-details-header">Delete "{{ contact.name }}"</h3>
+    <p class="contact-details-content">Are you sure you want to delete this contact?</p>
+    <div class="contact-details-footer">
+        <button class="contact-details-btn delete" mat-button (click)="onDeletedTap()"><span
+                [ngClass]="{'isLoading': isLoading === false}"><app-loading></app-loading></span><span
+                [ngClass]="{'isLoading': isLoading === true}">Delete</span></button>
+        <button class="contact-details-btn" mat-button (click)="onCanceledTap()">Cancel</button>
+    </div>
+</div>

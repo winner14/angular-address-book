@@ -1,0 +1,94 @@
+@import '../../../styles.scss';
+
+.add-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+
+    .add-contact-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .add-contact-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .close {
+            cursor: pointer;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+    .add-contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+
+        .add-contact-input {
+            // padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            // margin-bottom: 1rem;
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .add-contact-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: .6rem;
+
+            .add-contact-label {
+                font-weight: 500;
+            }
+
+            .add-contact-value {
+                // color: $textColorDisabled;
+            }
+        }
+    }
+
+    .add-contact-actions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        .isLoading {
+            display: none;
+        }
+
+        .add-contact-btn {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .add-contact-btn:hover {
+            opacity: 0.8;
+        }
+
+        .add-contact-clear {
+            background-color: $secondaryColor;
+            color: #fff;
+        }
+
+        .add-contact-save {
+            background-color: $primaryColor;
+            color: #fff;
+        }
+    }
+}

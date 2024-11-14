@@ -1,0 +1,73 @@
+@import '../../../styles.scss';
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    overflow-x: scroll;
+
+}
+
+.table tr {
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: 400;
+    text-align: left;
+    padding: 8px;
+}
+
+.table td {
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #611f5a1c;
+}
+
+.more-btn {
+    cursor: pointer;
+    width: fit-content;
+    margin-right: 2rem;
+}
+
+.dialog-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 500ms;
+    // visibility: hidden;
+    // display: none;
+    // opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.custom-dialog-container {
+    border-radius: 5px;
+}
+
+// #details-dialog {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     background: rgba(0, 0, 0, 0.3);
+//     transition: opacity 500ms;
+// }

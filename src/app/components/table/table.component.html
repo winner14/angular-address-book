@@ -1,0 +1,42 @@
+<table class="table">
+    <thead>
+        <tr class="thead">
+            <th class="name">Name</th>
+            <th class="email">Email</th>
+            <th class="phone-no">Phone</th>
+            <th class="more">Address</th>
+            <th class="more"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (contacts.length > 0) {
+        @for (contact of contacts; track contact.id) {
+        <tr>
+            <td class="name">{{ contact.name }}</td>
+            <td class="email">{{contact.email}}</td>
+            <td class="phone-no">{{contact.phone}}</td>
+            <td class="">{{contact.address}}</td>
+            <td class="more-btn" mat-button>
+                <svg (click)="onDetailsTap(contact)" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="#000" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-more-vertical">
+                    <circle cx="12" cy="12" r="1"></circle>
+                    <circle cx="12" cy="5" r="1"></circle>
+                    <circle cx="12" cy="19" r="1"></circle>
+                </svg>
+
+                <!-- <button mat-button (click)="openDialog()">Open dialog</button> -->
+            </td>
+        </tr>
+        }
+        } @else {
+        <tr>
+            <td colspan="5" class="no-contacts">No contacts found</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<!-- <div class="dialog-backdrop">
+    <app-contact-details />
+</div> -->

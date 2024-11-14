@@ -1,0 +1,33 @@
+<div class="modal-pop-up contact-details">
+    <div class="contact-details-header">
+        <h3 class="contact-details-title">Contact Details</h3>
+        <svg (click)="onCloseTap()" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather close feather-x">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </div>
+    <div class="contact-details-content">
+        <div class="contact-details-item">
+            <div class="contact-details-label">Name:</div>
+            <div class="contact-details-value">{{ contact.name }}</div>
+        </div>
+        <div class="contact-details-item">
+            <div class="contact-details-label">Phone:</div>
+            <div class="contact-details-value">{{ contact.phone }}</div>
+        </div>
+        <div class="contact-details-item">
+            <div class="contact-details-label">Email:</div>
+            <div class="contact-details-value">{{ contact.email }}</div>
+        </div>
+        <div class="contact-details-item">
+            <div class="contact-details-label">Address:</div>
+            <div class="contact-details-value">{{ contact.address }}</div>
+        </div>
+    </div>
+    <div class="contact-details-footer">
+        <button class="contact-details-btn delete" mat-button (click)="onDeleteTap(contact)">Delete</button>
+        <button class="contact-details-btn" mat-button (click)="onEditTap(contact)">Edit</button>
+    </div>
+</div>

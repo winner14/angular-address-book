@@ -1,0 +1,42 @@
+<div class="add-contact">
+    <div class="add-contact-header">
+        <h3 class="add-contact-title">Contact Details</h3>
+        <svg (click)="onCloseTap()" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather close feather-x">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </div>
+
+    <form [formGroup]="formGroup" onsubmit="">
+        <div class="add-contact-form">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Name</mat-label>
+                <input class="add-contact-input" matInput placeholder="Kofi Lee" type="text"
+                    formControlName="nameControl">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input class="add-contact-input" matInput placeholder="0241234567" type="tel"
+                    formControlName="phoneNoControl">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input class="add-contact-input" matInput placeholder="addo@gmail.com" type="email"
+                    formControlName="emailControl">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Address</mat-label>
+                <input class="add-contact-input" matInput placeholder="Maseru st." type="text"
+                    formControlName="addressControl">
+            </mat-form-field>
+            <!-- <mat-checkbox class="add-contact-item" [formControl]="favoriteControl">Favourite</mat-checkbox> -->
+        </div>
+
+        <div class="add-contact-actions">
+            <button class="add-contact-btn add-contact-clear" mat-button (click)="onCancelTap()">Cancel</button>
+            <button class="add-contact-btn add-contact-save" mat-button (click)="onUpdateTap()">Update</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,60 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Winner Kpodo",
+      "phoneNo": "0987654321",
+      "email": "win@gmail.com",
+      "favorite": true
+    },
+    {
+      "id": "2",
+      "name": "John Doe",
+      "phoneNo": "1234567890",
+      "email": "doe@gmail.com",
+      "favorite": false
+    },
+    {
+      "id": "3",
+      "name": "Kofi Johnson",
+      "phoneNo": "0241234567",
+      "email": "fii@gmail.com",
+      "favorite": true
+    },
+    {
+      "id": "4",
+      "name": "Ama Ann",
+      "phoneNo": "0987654321",
+      "email": "ann@gmail.com",
+      "favorite": false
+    },
+    {
+      "id": "5",
+      "name": "Bentil",
+      "phoneNo": "0987654321",
+      "email": "ben@gmail.com",
+      "favorite": true
+    },
+    {
+      "id": "6",
+      "name": "Tom Chad",
+      "phoneNo": "0987654321",
+      "email": "win@gmail.com",
+      "favorite": false
+    },
+    {
+      "id": 1731328234134,
+      "name": "Winner Kpodo",
+      "email": "winnerkpodo0@gmail.com",
+      "phoneNo": "0241272178",
+      "favorite": true
+    },
+    {
+      "id": 1731328258435,
+      "name": "dfsa",
+      "email": "dsdas",
+      "phoneNo": "0241272178",
+      "favorite": true
+    }
+  ]
+}
